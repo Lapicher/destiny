@@ -16,7 +16,7 @@ gulp.task("default", ["concat-js","compile-sass"], function(){
 
     // iniciar BrowserSync
     browserSync.init({
-        server: "./", // levanta servidor web en carpeta actual
+        server: "./", // levanta servidor web en carpeta actual, carga el archivo index.html
         browser: "google chrome"
     });
 

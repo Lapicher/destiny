@@ -1,0 +1,29 @@
+.list-article{
+    position: relative;
+    display: block;
+    top: 100px;
+    margin: 0 20%;
+    align-content: center;
+    .item-article{
+        display: block;
+        background-color: #C0C0C0;
+        height: 400px;
+        margin-bottom: 10px;
+        min-width: 600px;
+        max-width: 900px;
+        -webkit-box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.20);
+        -moz-box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.20);
+        box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.20);
+        border-radius: 3px;
+    }
+}
+.paginacion{
+    margin: 0 20%;
+    top: 150px;
+    a{
+        text-decoration: none;
+        font-size: $font-size-login+4pt;
+        color: $color-adeep;
+        padding: 0 15px;
+    }
+}

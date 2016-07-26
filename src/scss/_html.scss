@@ -4,5 +4,10 @@ body {
     font-family: $font-titulo-principal;
     font-size: $font-size-titulo-principal;
     color: $font-color-principal;
+    background-color: $color-brackground;
     //padding-top: 50px;
+}
+p {
+    font-family: $font-article;
+    font-size: $font-size-article;
 }
