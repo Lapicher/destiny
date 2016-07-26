@@ -1,5 +1,59 @@
-.titulo{
+.header{
+    background-color: $color-brackground-header;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    .titulo{
+        font-size: $font-size-titulo-principal;
+        float: left;
+        padding: 13px 50px;
+        font-size: 25pt;
+        text-shadow: 2px 2px $color-adeep;
+        text-transform: uppercase;
+    }
+    .access{
+        margin-right: 30px;
+        float: right;
+        font-size: $font-size-login;
+        .login, .register{
+            color: $color-adeep;
+            font-size: $font-size-login;
+            float: right;
+            text-decoration: none;
+            padding: 20px 10px;
+        }
+    }
+    .superior{
+        display: block;
+        height: 60px;
+    }
+    .inferior{
+        .navbar{
+            .lista-nav{
+                float: left;
+                margin: 0;
+            }
+            .lista-item{
+                display: inline-block;
+                padding-left: 10px;
+                font-size: $font-size-login;
+                padding: 15px;
 
+            }.lista-item a{
+                color: $color-brackground;
+                text-decoration: none;
+            }
+
+            .lista-item:hover > a {
+                color:white;
+                transition : all 0.5s linear;
+            }
+        }
+    }
+}
+/*
+.titulo{
+    display: block;
     height: 60px;
     background-color: $color-brackground-header;
     .access{
@@ -23,9 +77,10 @@
 }
 
 .navbar{
-    z-index: 1;
+    //z-index: 1;
     background-color: $color-brackground-header;
     position: fixed;
+
     top: 60px;
     width: 100%;
     font-size: 14px;
@@ -53,3 +108,4 @@
     }
 
 }
+*/

@@ -1,10 +1,31 @@
 footer{
+    background-color: $color-brackground-header;
     position: relative;
     top: 200px;
-    height: 20px;
-    background-color: $color-brackground-header;
-    text-align: center;
-    padding: 20px;
-    font-size: $font-size-login;
-    color: $color-adeep;
+    height: 60px;
+    @include if-is-phone {
+        span {
+            font-size: $font-size-login;
+            color: $color-adeep;
+        }
+        span, p {
+            margin-left: 10px;
+        }
+        p {
+            font-size: $font-size-login;
+            background-color: $color-brackground-header;
+            padding-top: 10px;
+            color: $color-adeep;
+        }
+    }
+    @include if-is-tablet {
+        height: 20px;
+        text-align: center;
+        padding: 20px;
+        font-size: $font-size-login;
+        color: $color-adeep;
+        span {
+            float: left;
+        }
+    }
 }

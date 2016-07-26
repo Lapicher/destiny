@@ -1,9 +1,20 @@
 .list-article{
     position: relative;
     display: block;
-    top: 100px;
-    margin: 0 20%;
+    top: 150px;
+    margin: 0 2%;
+    margin-bottom: 30px;
     align-content: center;
+    .item-article{
+        display: block;
+        background-color: #C0C0C0;
+        @include sombra;
+        margin-bottom: 10px;
+        @include if-is-phone {
+            height: 400px;
+        }
+    }
+    /*
     .item-article{
         display: block;
         background-color: #C0C0C0;
@@ -11,19 +22,86 @@
         margin-bottom: 10px;
         min-width: 600px;
         max-width: 900px;
-        -webkit-box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.20);
-        -moz-box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.20);
-        box-shadow: 4px 15px 48px 8px rgba(0,0,0,0.20);
-        border-radius: 3px;
+
     }
+    */
 }
 .paginacion{
     margin: 0 20%;
     top: 150px;
+    align-items: center;
+    @include center;
+    .divVert{
+        display: inline;
+        border-right: 1pt solid gray;
+        margin-right: 8px;
+    }
     a{
         text-decoration: none;
-        font-size: $font-size-login+4pt;
+        font-size: $font-size-login+2pt;
         color: $color-adeep;
-        padding: 0 15px;
+        &:hover{
+            color:red;
+        }
+    }
+
+    @include if-is-phone {
+
+        margin: 0 5%;
+
     }
 }
+.scroll-up {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: calc(100vh - 50px);
+    right: 30px;
+    opacity: 0.5;
+    background: transparent url('../../src/img/arrowtop.png') top left no-repeat;
+    z-index: 10;
+    @include if-is-phone {
+        right: 10px;
+    }
+
+}
+/*
+.btn-top {
+    position: fixed !important;
+    top: inherit;
+    right: 0;
+    bottom: 0;
+    width: 70px;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    height: 35px;
+    overflow: hidden;
+    display: none;
+    z-index: 1000;
+    color: #8f8f8f;
+}
+.btn-top a {
+    color: #ededed;
+    border: none;
+    font-weight: bold;
+    width: 70px;
+    line-height: 40px;
+    height: 70px;
+    background: rgba(28,28,28,0.3);
+    display: block;
+    border-radius: 100px;
+}
+.btn-top a:before {
+    margin-right: 0;
+}
+.btn-top a:before {
+    content: '\ea50';
+    position: static;
+    font-size: 2em;
+    font-family: "icomoon";
+}
+.btn-top a:hover {
+    background: rgba(12,95,169,0.8);
+}
+*/

@@ -4,7 +4,7 @@
     margin: 0 auto; /*arriba y abajo 0, y por los lados me ponga margenes automaticos*/
 }
 /*Clear fix hack*/
-.row : before, .row : after{
+.row :before, .row :after{
     content: ""; /*cambia el contenido del html, limpia*/
     display: table;
     clear: both;
