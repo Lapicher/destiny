@@ -9,3 +9,8 @@
          @content;
      }
 }
+@mixin if-is-desktop{
+    @media all and (min-width: #{$tablet-width}){
+        @content;
+    }
+}

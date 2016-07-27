@@ -1,13 +1,13 @@
 .list-article{
     position: relative;
     display: block;
-    top: 150px;
+    top: 80px;
     margin: 0 2%;
     margin-bottom: 30px;
     align-content: center;
     .item-article{
         display: block;
-        background-color: #C0C0C0;
+        background-color: $color-article;
         @include sombra;
         margin-bottom: 10px;
         @include if-is-phone {
@@ -28,7 +28,7 @@
 }
 .paginacion{
     margin: 0 20%;
-    top: 150px;
+    top: 100px;
     align-items: center;
     @include center;
     .divVert{
@@ -41,14 +41,12 @@
         font-size: $font-size-login+2pt;
         color: $color-adeep;
         &:hover{
-            color:red;
+            color: $color-hover;
         }
     }
 
     @include if-is-phone {
-
         margin: 0 5%;
-
     }
 }
 .scroll-up {

@@ -1,8 +1,40 @@
-.header{
+header{
+    //width: 100%;
+    height: 60px;
+    @include if-is-phone {
+        width: 100%;
+    }
     background-color: $color-brackground-header;
+    z-index: 3;
     position: fixed;
-    z-index: 1;
-    width: 100%;
+    .icon-padre{
+        float: left;
+    }
+    @include if-is-phone {
+        .icon-sandwich:before {
+            float: left;
+            content: '\e9be';
+            position: static;
+            font-size: 1em;
+            font-family: "icomoon";
+            padding: 10px 20px;
+        }
+        .icon-sandwich, .icon-lupa{
+            color: $color-categoria-phone;
+        }
+        .active{
+            color: $color-adeep;
+        }
+        .icon-lupa:before{
+            float: right;
+            content: '\e986';
+            position: static;
+            font-size: 0.9em;
+            font-family: "icomoon";
+            padding: 15px 20px;
+        }
+
+    }
     .titulo{
         font-size: $font-size-titulo-principal;
         float: left;
@@ -10,26 +42,81 @@
         font-size: 25pt;
         text-shadow: 2px 2px $color-adeep;
         text-transform: uppercase;
-    }
-    .access{
-        margin-right: 30px;
-        float: right;
-        font-size: $font-size-login;
-        .login, .register{
-            color: $color-adeep;
-            font-size: $font-size-login;
-            float: right;
-            text-decoration: none;
-            padding: 20px 10px;
+        @include if-is-phone {
+            font-size: 20pt;
+            transition: 0.5s linear;
+            padding: 13px 0px;
+
         }
     }
-    .superior{
-        display: block;
-        height: 60px;
+}
+.header, .categorias{
+    background-color: $color-brackground-header;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top : 0px;
+    display: block;
+
+    @include if-is-phone {
+        top: 60px;
+        display: none;
     }
+    .superior{
+        height: 60px;
+        .access{
+            margin-right: 30px;
+            float: right;
+            font-size: $font-size-login;
+            .login, .register{
+                color: $color-adeep;
+                font-size: $font-size-login;
+                float: right;
+                text-decoration: none;
+                padding: 20px 10px;
+            }
+        }
+        .txt-buscar{
+            display: none;
+            position: absolute;
+            top: 65px;
+            margin-left: 70%;
+            font-size: $font-size-login;
+            border-radius: 5px;
+            background-color: $color-article;
+            padding: 3px;
+
+            &:focus{
+                outline-color: $color-sirena;
+                background-color: $color-grey;
+            }
+            @include if-is-phone {
+                float: right;
+                margin-left: 40%;
+                margin-right: 20px;
+                position: relative;
+                top: 0;
+            }
+            @include if-is-desktop {
+                margin-right: 0px;
+            }
+        }
+        @include if-is-phone {
+            height: 40px;
+        }
+    }
+
+}
+.categorias{
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    top: 60px;
     .inferior{
         .navbar{
             .lista-nav{
+                width: 100%;
+                background-color: $color-brackground-header;
                 float: left;
                 margin: 0;
             }
@@ -38,6 +125,11 @@
                 padding-left: 10px;
                 font-size: $font-size-login;
                 padding: 15px;
+                @include if-is-phone {
+                    display: block;
+                    background-color: $color-categoria-phone;
+                    border-bottom: 1pt solid $color-adeep;
+                }
 
             }.lista-item a{
                 color: $color-brackground;
@@ -50,6 +142,20 @@
             }
         }
     }
+    @include if-is-phone {
+        display: none;
+        top: 110px;
+    }
+}
+.phone-active{
+    @include if-is-phone {
+        display: inline-block;
+    }
+}
+.phone-inactive{
+  @include if-is-phone {
+      display: none;
+  }
 }
 /*
 .titulo{

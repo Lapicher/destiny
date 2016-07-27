@@ -1,7 +1,10 @@
 footer{
     background-color: $color-brackground-header;
     position: relative;
-    top: 200px;
+    top: 150px;
+    @include if-is-tablet {
+        top: calc(100vh - 350px);
+    }
     height: 60px;
     @include if-is-phone {
         span {
