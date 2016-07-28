@@ -1,7 +1,10 @@
 .container{
     width: 100%;
-    max-width: 1200px;
+    //max-width: 1200px;
     margin: 0 auto; /*arriba y abajo 0, y por los lados me ponga margenes automaticos*/
+}
+.row{
+    box-sizing: border-box;
 }
 /*Clear fix hack*/
 .row :before, .row :after{

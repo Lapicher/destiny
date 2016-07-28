@@ -1,7 +1,10 @@
 .list-article{
     position: relative;
     display: block;
-    top: 80px;
+    top: 150px;
+    @include if-is-phone {
+        top: 80px;
+    }
     margin: 0 2%;
     margin-bottom: 30px;
     align-content: center;
@@ -13,22 +16,28 @@
         @include if-is-phone {
             height: 400px;
         }
+        @include if-is-tablet {
+            height: 600px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 700px;
+            margin-bottom: 15px;
+        }
+        @include if-is-desktop {
+            height: 600px;
+            max-width: 800px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 20px;
+            //margin-bottom: 30px;
+        }
     }
-    /*
-    .item-article{
-        display: block;
-        background-color: #C0C0C0;
-        height: 400px;
-        margin-bottom: 10px;
-        min-width: 600px;
-        max-width: 900px;
 
-    }
-    */
 }
 .paginacion{
+    font-weight: bold;
     margin: 0 20%;
-    top: 100px;
+    top: 150px;
     align-items: center;
     @include center;
     .divVert{
@@ -44,11 +53,13 @@
             color: $color-hover;
         }
     }
-
     @include if-is-phone {
         margin: 0 5%;
+        top: 100px;
     }
+
 }
+
 .scroll-up {
     width: 40px;
     height: 40px;
@@ -61,7 +72,86 @@
     @include if-is-phone {
         right: 10px;
     }
+}
 
+// estilos para articulo espesifico.
+//Usuario
+.item-article .article{
+    //background-color: red;
+
+    .section-user{
+        padding: 5px;
+        position: relative;
+        font-family: $font-pt;
+        .user{
+
+            width: 60px;
+            img{
+                height: 50px;
+                display: inline-block;
+                border-radius: 50%;
+            }
+
+
+        }
+        .user-name{
+            font-size: $font-size-user;
+            display: inline-block;
+            float: left;
+
+        }
+        .fecha span{
+            float: right;
+            font-size: $font-size-fecha;
+        }
+    }
+
+
+
+
+}
+.article{
+    /*
+    background-color: red;
+    height: 400px;
+    */
+    .title-article{
+        font-family: $font-pt;
+        position: relative;
+        //padding-top: 40px;
+    }
+    .text-article{
+        font-family: $font-cardo;
+    }
+    .img-article{
+
+    }
+    .fav-comentarios{
+        font-size: $font-size-login - 1pt;
+        padding: 0 10px;
+        //position: relative;
+        //top: 150px;
+        .icon-heart{
+            float: left;
+            color: darken($color-article, 10%);
+        }
+        .icon-bubbles{
+            float: right;
+        }
+        .icon-bubbles:before {
+            float: right;
+            content: '\e96c';
+            position: static;
+            font-size: 0.9em;
+            font-family: "icomoon";
+        }
+        .icon-heart:before{
+            content: '\e9da';
+            position: static;
+            font-size: 1.5em;
+            font-family: "icomoon";
+        }
+    }
 }
 /*
 .btn-top {
