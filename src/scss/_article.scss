@@ -32,7 +32,6 @@
             //margin-bottom: 30px;
         }
     }
-
 }
 .paginacion{
     font-weight: bold;
@@ -80,63 +79,104 @@
     //background-color: red;
 
     .section-user{
-        padding: 5px;
+        padding: 20px;
         position: relative;
         font-family: $font-pt;
         .user{
-
             width: 60px;
             img{
                 height: 50px;
                 display: inline-block;
                 border-radius: 50%;
             }
-
-
+        }
+        .user, figcaption{
+            cursor: pointer;
+            &:hover{
+                color: darken($color-azul-cielo, 50%);
+            }
         }
         .user-name{
             font-size: $font-size-user;
             display: inline-block;
             float: left;
-
         }
         .fecha span{
             float: right;
             font-size: $font-size-fecha;
         }
+        .col-6{
+            width: 65%;
+            @include if-is-phone {
+                width: 50%;
+            }
+        }
+
     }
-
-
-
-
 }
 .article{
-    /*
-    background-color: red;
-    height: 400px;
-    */
-    .title-article{
-        font-family: $font-pt;
-        position: relative;
-        //padding-top: 40px;
-    }
-    .text-article{
-        font-family: $font-cardo;
+    display: block;
+    .cont-title{
+        height: 110px;
+        background-color: darken($color-article, 5%);;
+        text-overflow: ellipsis;
+
+        .title-article{
+            font-family: $font-pt;
+            font-size: $font-size-article + 1pt;
+            position: relative;
+            padding-top: 50px;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 5px;
+            color: $color-negro;
+            font-weight: bold;
+        }
     }
     .img-article{
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 
+        @include if-is-phone {
+            height: 100px;
+        }
+    }
+    .cont-detalle-article{
+        font-family: $font-cardo;
+        color: $color-adeep;
+        padding: 10px 20px 10px 20px;
+        overflow: hidden;
+        height: 80px;
+        .text-article{
+            text-overflow: ellipsis;
+        }
+    }
+    .article-click {
+        &:hover{
+            cursor: pointer;
+        }
     }
     .fav-comentarios{
         font-size: $font-size-login - 1pt;
-        padding: 0 10px;
-        //position: relative;
-        //top: 150px;
+        padding: 0 20px;
+        padding-top: 15px;
         .icon-heart{
             float: left;
             color: darken($color-article, 10%);
         }
+        .favup{
+            color: $color-rojo-fav;
+        }
         .icon-bubbles{
             float: right;
+            color: darken($color-brackground, 20%);
+        }
+        .col-1 {
+            @include if-is-phone {
+                width: 16.66666667%;
+            }
         }
         .icon-bubbles:before {
             float: right;
@@ -153,43 +193,3 @@
         }
     }
 }
-/*
-.btn-top {
-    position: fixed !important;
-    top: inherit;
-    right: 0;
-    bottom: 0;
-    width: 70px;
-    left: 0;
-    text-align: center;
-    margin: 0 auto;
-    height: 35px;
-    overflow: hidden;
-    display: none;
-    z-index: 1000;
-    color: #8f8f8f;
-}
-.btn-top a {
-    color: #ededed;
-    border: none;
-    font-weight: bold;
-    width: 70px;
-    line-height: 40px;
-    height: 70px;
-    background: rgba(28,28,28,0.3);
-    display: block;
-    border-radius: 100px;
-}
-.btn-top a:before {
-    margin-right: 0;
-}
-.btn-top a:before {
-    content: '\ea50';
-    position: static;
-    font-size: 2em;
-    font-family: "icomoon";
-}
-.btn-top a:hover {
-    background: rgba(12,95,169,0.8);
-}
-*/

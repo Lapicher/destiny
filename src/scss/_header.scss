@@ -47,7 +47,6 @@ header{
             font-size: 20pt;
             transition: 0.5s linear;
             padding: 13px 0px;
-
         }
     }
 }
@@ -80,7 +79,6 @@ header{
                 }
             }
         }
-
         .txt-buscar{
             float: right;
             display: inline-block;
@@ -104,17 +102,6 @@ header{
                 position: relative;
                 top: 0;
             }
-
-            @include if-is-desktop {
-                //margin-right: 0px;
-                //position: fixed;
-            }
-            @include if-is-tablet {
-                //position: relative;
-                //position: static;
-                //margin-right: 20px;
-            }
-
         }
         @include if-is-phone {
             height: 40px;
@@ -162,7 +149,6 @@ header{
                     color: $color-holsten-white;
                 }
             }
-
             .lista-item:hover > a {
                 color: darken($color-hover,10%);
                 transition : all 0.3s linear;
@@ -170,7 +156,6 @@ header{
                 @include if-is-phone {
                     color: $color-holsten-white;
                 }
-
             }
         }
     }

@@ -10076,17 +10076,46 @@ return jQuery;
 
 },{}],2:[function(require,module,exports){
 require('./header-events');
+require('./article-events');
+require('./init');
 
-},{"./header-events":3}],3:[function(require,module,exports){
+},{"./article-events":3,"./header-events":4,"./init":5}],3:[function(require,module,exports){
+var $=require('jquery');
+
+$('.article-click').on("click",function(){
+    //alert("click");
+    var id=$(this).parent().data().id;
+    var userArticle=$(this).parent().children().data().user;
+    console.log(userArticle);
+});
+
+$('.icon-heart').on("click",function(){
+    if (typeof(Storage) !== "undefined") {
+        // Code for localStorage/sessionStorage.
+          var id=$(this).parent().parent().data().id;
+          var favorito=localStorage.getItem(id);
+          console.log(favorito);
+          if(favorito!="1"){
+              localStorage.setItem(id,"1");
+              $(this).addClass("favup");
+          }
+          else {
+              localStorage.removeItem(id);
+              $(this).removeClass("favup");
+          }
+    } else {
+      // Sorry! No Web Storage support..
+      console.log("Sorry! No Web Storage support..");
+    }
+});
+
+},{"jquery":1}],4:[function(require,module,exports){
 var $=require('jquery');
 
 //evento para boton de tipo sandwich-event
 $('.icon-sandwich').on("click",eventoSandwich);
 
-$('.icon-lupa').on("click", eventoLupa
-
-
-);
+$('.icon-lupa').on("click", eventoLupa);
 
 function eventoSandwich(){
 
@@ -10117,5 +10146,22 @@ function eventoLupa(){
         $( ".icon-sandwich").on( "click",eventoSandwich);
     }
 }
+
+},{"jquery":1}],5:[function(require,module,exports){
+var $=require('jquery');
+// recorremos todos los articulos para activarles el icono de favorito en caso
+// de haber sido marcados.
+
+$(".article").each(function() {
+    var id=localStorage.getItem($(this).data().id.toString());
+    var iconFavorito=$(this).find(".icon-heart");
+    //console.log(id);
+    if(id!=null){
+        iconFavorito.addClass("favup");
+    }
+    else {
+        iconFavorito.removeClass("favup");
+    }
+});
 
 },{"jquery":1}]},{},[2]);

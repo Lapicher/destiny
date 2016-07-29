@@ -3,10 +3,7 @@ var $=require('jquery');
 //evento para boton de tipo sandwich-event
 $('.icon-sandwich').on("click",eventoSandwich);
 
-$('.icon-lupa').on("click", eventoLupa
-
-
-);
+$('.icon-lupa').on("click", eventoLupa);
 
 function eventoSandwich(){
 
