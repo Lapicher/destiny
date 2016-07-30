@@ -1,0 +1,136 @@
+.plantilla-detalle{
+    display: none;
+    position: relative;
+    top: 110px;
+
+    //background-color: $color-article;
+    @include if-is-phone {
+        top: 70px;
+    }
+    .cerrar{
+      padding-right: 20px;
+      padding-top: 10px;
+      .icon-cross {
+          color: darken($color-rojo-fav, 20%);
+          &:hover{
+              cursor: pointer;
+              color: darken($color-rojo-fav, 30%);
+          }
+      }
+      .icon-cross:before {
+
+          content: "\ea0f";
+          float: right;
+          position: static;
+          font-size: 0.8em;
+          font-family: "icomoon";
+      }
+
+    }
+    .user{
+        background-color: darken($color-article, 5%);
+        height: 150px;
+        display: block;
+        text-align: center;
+        .picture-profile {
+            padding-top: 20px;
+            img{
+                height: 80px;
+                width: 80px;
+                border-radius: 40px;
+            }
+        }
+        h1{
+            padding-top: 10px;
+            font-family: $font-pt;
+        }
+        @include sombra;
+    }
+
+    .title-article{
+        padding: 40px 10px 20px 10px;
+        color: $color-negro;
+        font-size: 23pt;
+        font-family: $font-titulo-principal;
+
+    }
+
+    .fecha-creacion {
+        padding-bottom: 20px;
+        span{
+            padding-left: 20px;
+            color: transparentize($color-adeep,0.5);
+            font-size: $font-size-login - 1pt;
+            strong{
+                font-weight: bold;
+            }
+        }
+    }
+    .img-article-header{
+        //background-image: url('../../articles/Wolverine/160415153500/img/personajes-inmortales-comics-7.jpg');
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include if-is-phone {
+            height: 300px;
+        }
+        @include if-is-desktop {
+            height: 1024px;
+        }
+    }
+    .article-detail{
+        padding-top: 30px;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        @include if-is-tablet {
+            width: 700px;
+        }
+        @include if-is-desktop {
+            width: 900px;
+        }
+        p {
+            color: $color-adeep;
+            font-family: $font-pt;
+            text-align: justify;
+        }
+        img{
+            width: 300px;
+            @include if-is-tablet {
+                width: 700px;
+            }
+            @include if-is-desktop {
+                width: 900px;
+            }
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: $font-size-login +2pt;
+            font-style: italic;
+        }
+        a{
+            text-decoration: none;
+            &:hover{
+                color: red;
+            }
+        }
+        strong{
+            font-weight: bold;
+        }
+
+    }
+}
+.change-background-color  {
+    background-color: $color-article;
+}
+.mostrar-detalle{
+    display: initial;
+}
+.ocultar-detalle{
+    display: none;
+}
+.closeup{
+    color: white;
+}

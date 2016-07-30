@@ -3,6 +3,7 @@ footer{
     position: relative;
     top: 150px;
     height: 60px;
+    
     @include if-is-tablet {
         top: 200px;
     }

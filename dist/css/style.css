@@ -4,6 +4,7 @@
 */
 @import 'https://fonts.googleapis.com/css?family=Fredericka+the+Great|Nixie+One';
 @import 'https://fonts.googleapis.com/css?family=Cardo:400,400i,700|PT+Serif:400,400i,700,700i';
+@import 'https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i|Sorts+Mill+Goudy:400,400i';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -375,9 +376,12 @@ header {
   .item-article .article .section-user .user {
     width: 60px; }
     .item-article .article .section-user .user img {
-      height: 50px;
+      height: 60px;
       display: inline-block;
       border-radius: 50%; }
+      @media all and (max-width: 767px) {
+        .item-article .article .section-user .user img {
+          height: 50px; } }
   .item-article .article .section-user .user, .item-article .article .section-user figcaption {
     cursor: pointer; }
     .item-article .article .section-user .user:hover, .item-article .article .section-user figcaption:hover {
@@ -385,7 +389,11 @@ header {
   .item-article .article .section-user .user-name {
     font-size: 13pt;
     display: inline-block;
-    float: left; }
+    float: left;
+    padding-left: 10px; }
+    @media all and (max-width: 767px) {
+      .item-article .article .section-user .user-name {
+        padding-left: 0; } }
   .item-article .article .section-user .fecha span {
     float: right;
     font-size: 9pt; }
@@ -402,15 +410,15 @@ header {
     background-color: #d7c9c9;
     text-overflow: ellipsis; }
     .article .cont-title .title-article {
-      font-family: "PT Serif", serif;
+      font-family: "Raleway", sans-serif;
       font-size: 15pt;
+      font-style: italic;
       position: relative;
       padding-top: 50px;
       margin-left: 5%;
       margin-right: 5%;
       margin-bottom: 5px;
-      color: black;
-      font-weight: bold; }
+      color: black; }
   .article .img-article {
     height: 300px;
     background-repeat: no-repeat;
@@ -420,13 +428,17 @@ header {
       .article .img-article {
         height: 100px; } }
   .article .cont-detalle-article {
-    font-family: "Cardo", serif;
-    color: #253A30;
+    color: rgba(37, 58, 48, 0.5);
     padding: 10px 20px 10px 20px;
     overflow: hidden;
     height: 80px; }
     .article .cont-detalle-article .text-article {
-      text-overflow: ellipsis; }
+      font-family: "PT Serif", serif;
+      text-overflow: ellipsis;
+      font-size: 14pt; }
+      @media all and (max-width: 767px) {
+        .article .cont-detalle-article .text-article {
+          font-size: 10pt; } }
   .article .article-click:hover {
     cursor: pointer; }
   .article .fav-comentarios {
@@ -498,3 +510,113 @@ footer {
       footer span {
         float: left;
         font-size: 20pt; } }
+
+.plantilla-detalle {
+  display: none;
+  position: relative;
+  top: 110px; }
+  @media all and (max-width: 767px) {
+    .plantilla-detalle {
+      top: 70px; } }
+  .plantilla-detalle .cerrar {
+    padding-right: 20px;
+    padding-top: 10px; }
+    .plantilla-detalle .cerrar .icon-cross {
+      color: #b02424; }
+      .plantilla-detalle .cerrar .icon-cross:hover {
+        cursor: pointer;
+        color: #861b1b; }
+    .plantilla-detalle .cerrar .icon-cross:before {
+      content: "\ea0f";
+      float: right;
+      position: static;
+      font-size: 0.8em;
+      font-family: "icomoon"; }
+  .plantilla-detalle .user {
+    background-color: #d7c9c9;
+    height: 150px;
+    display: block;
+    text-align: center;
+    -webkit-box-shadow: 4px 15px 48px 8px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 4px 15px 48px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 15px 48px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 3px; }
+    .plantilla-detalle .user .picture-profile {
+      padding-top: 20px; }
+      .plantilla-detalle .user .picture-profile img {
+        height: 80px;
+        width: 80px;
+        border-radius: 40px; }
+    .plantilla-detalle .user h1 {
+      padding-top: 10px;
+      font-family: "PT Serif", serif; }
+  .plantilla-detalle .title-article {
+    padding: 40px 10px 20px 10px;
+    color: black;
+    font-size: 23pt;
+    font-family: "Fredericka the Great", cursive; }
+  .plantilla-detalle .fecha-creacion {
+    padding-bottom: 20px; }
+    .plantilla-detalle .fecha-creacion span {
+      padding-left: 20px;
+      color: rgba(37, 58, 48, 0.5);
+      font-size: 11pt; }
+      .plantilla-detalle .fecha-creacion span strong {
+        font-weight: bold; }
+  .plantilla-detalle .img-article-header {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+    @media all and (max-width: 767px) {
+      .plantilla-detalle .img-article-header {
+        height: 300px; } }
+    @media all and (min-width: 1024px) {
+      .plantilla-detalle .img-article-header {
+        height: 1024px; } }
+  .plantilla-detalle .article-detail {
+    padding-top: 30px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px; }
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+      .plantilla-detalle .article-detail {
+        width: 700px; } }
+    @media all and (min-width: 1024px) {
+      .plantilla-detalle .article-detail {
+        width: 900px; } }
+    .plantilla-detalle .article-detail p {
+      color: #253A30;
+      font-family: "PT Serif", serif;
+      text-align: justify; }
+    .plantilla-detalle .article-detail img {
+      width: 300px;
+      padding-bottom: 10px; }
+      @media all and (min-width: 768px) and (max-width: 1024px) {
+        .plantilla-detalle .article-detail img {
+          width: 700px; } }
+      @media all and (min-width: 1024px) {
+        .plantilla-detalle .article-detail img {
+          width: 900px; } }
+    .plantilla-detalle .article-detail h2 {
+      font-size: 14pt;
+      font-style: italic; }
+    .plantilla-detalle .article-detail a {
+      text-decoration: none; }
+      .plantilla-detalle .article-detail a:hover {
+        color: red; }
+    .plantilla-detalle .article-detail strong {
+      font-weight: bold; }
+
+.change-background-color {
+  background-color: #e2d8d8; }
+
+.mostrar-detalle {
+  display: initial; }
+
+.ocultar-detalle {
+  display: none; }
+
+.closeup {
+  color: white; }

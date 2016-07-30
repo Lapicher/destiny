@@ -85,9 +85,12 @@
         .user{
             width: 60px;
             img{
-                height: 50px;
+                height: 60px;
                 display: inline-block;
                 border-radius: 50%;
+                @include if-is-phone {
+                    height: 50px;
+                }
             }
         }
         .user, figcaption{
@@ -100,6 +103,11 @@
             font-size: $font-size-user;
             display: inline-block;
             float: left;
+            padding-left: 10px;
+            @include if-is-phone {
+                padding-left: 0;
+            }
+
         }
         .fecha span{
             float: right;
@@ -118,19 +126,20 @@
     display: block;
     .cont-title{
         height: 110px;
-        background-color: darken($color-article, 5%);;
+        background-color: darken($color-article, 5%);
         text-overflow: ellipsis;
 
         .title-article{
-            font-family: $font-pt;
+            font-family: $font-raleway;
             font-size: $font-size-article + 1pt;
+            font-style: italic;
             position: relative;
             padding-top: 50px;
             margin-left: 5%;
             margin-right: 5%;
             margin-bottom: 5px;
             color: $color-negro;
-            font-weight: bold;
+            //font-weight: bold;
         }
     }
     .img-article{
@@ -144,13 +153,17 @@
         }
     }
     .cont-detalle-article{
-        font-family: $font-cardo;
-        color: $color-adeep;
+        color: transparentize($color-adeep, 0.5);
         padding: 10px 20px 10px 20px;
         overflow: hidden;
         height: 80px;
         .text-article{
+            font-family: $font-pt;
             text-overflow: ellipsis;
+            font-size: 14pt;
+            @include if-is-phone {
+                font-size: 10pt;
+            }
         }
     }
     .article-click {
