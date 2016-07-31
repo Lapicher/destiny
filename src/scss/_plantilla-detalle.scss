@@ -134,3 +134,63 @@
 .closeup{
     color: white;
 }
+// Estilo apartado de comentarios.
+.comentarios{
+    background-color: $color-article;
+    position: relative;
+    top: 100px;
+    display: block;
+    width: 100%;
+    margin-bottom: 100px;
+    @include if-is-tablet {
+        width: 700px;
+    }
+    @include if-is-desktop {
+        width: 900px;
+    }
+
+    label{
+        font-size: $font-size-login;
+    }
+    .coment{
+        padding: 10px 0;
+        p{
+            font-size: $font-size-login;
+        }
+    }
+    .escribir{
+        padding: 0 10px;
+        background-color: darken($color-article, 5%);;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+    .sectionComments{
+      margin-top: 10px;
+      .item-comment{
+          margin-top: 2px;
+          background-color: darken($color-article, 5%);
+      }
+    }
+
+    .escribir{
+
+        padding-bottom: 10px;
+        padding: 0 10px 10px 10;
+        small{
+            font-size: $font-size-login - 3pt;
+        }
+        textarea{
+            width: calc(100% - 10px);
+        }
+        button{
+            padding: 10px 20px;
+            background-color: $color-brackground-header;
+            border-radius: 5px;
+            &:hover{
+                background-color: $color-hover;
+            }
+        }
+    }
+
+}

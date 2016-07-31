@@ -620,3 +620,47 @@ footer {
 
 .closeup {
   color: white; }
+
+.comentarios {
+  background-color: #e2d8d8;
+  position: relative;
+  top: 100px;
+  display: block;
+  width: 100%;
+  margin-bottom: 100px; }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .comentarios {
+      width: 700px; } }
+  @media all and (min-width: 1024px) {
+    .comentarios {
+      width: 900px; } }
+  .comentarios label {
+    font-size: 12pt; }
+  .comentarios .coment {
+    padding: 10px 0; }
+    .comentarios .coment p {
+      font-size: 12pt; }
+  .comentarios .escribir {
+    padding: 0 10px;
+    background-color: #d7c9c9;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px; }
+  .comentarios .sectionComments {
+    margin-top: 10px; }
+    .comentarios .sectionComments .item-comment {
+      margin-top: 2px;
+      background-color: #d7c9c9; }
+  .comentarios .escribir {
+    padding-bottom: 10px;
+    padding: 0 10px 10px 10; }
+    .comentarios .escribir small {
+      font-size: 9pt; }
+    .comentarios .escribir textarea {
+      width: calc(100% - 10px); }
+    .comentarios .escribir button {
+      padding: 10px 20px;
+      background-color: #66A790;
+      border-radius: 5px; }
+      .comentarios .escribir button:hover {
+        background-color: #4c8a74; }
