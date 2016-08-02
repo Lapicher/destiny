@@ -556,13 +556,13 @@ footer {
     font-size: 23pt;
     font-family: "Fredericka the Great", cursive; }
   .plantilla-detalle .fecha-creacion {
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    font-size: 11pt;
+    color: rgba(37, 58, 48, 0.5); }
+    .plantilla-detalle .fecha-creacion strong {
+      font-weight: bold; }
     .plantilla-detalle .fecha-creacion span {
-      padding-left: 20px;
-      color: rgba(37, 58, 48, 0.5);
-      font-size: 11pt; }
-      .plantilla-detalle .fecha-creacion span strong {
-        font-weight: bold; }
+      padding-left: 20px; }
   .plantilla-detalle .img-article-header {
     height: 600px;
     background-repeat: no-repeat;

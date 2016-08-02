@@ -57,13 +57,13 @@
 
     .fecha-creacion {
         padding-bottom: 20px;
+        font-size: $font-size-login - 1pt;
+        color: transparentize($color-adeep,0.5);
+        strong{
+            font-weight: bold;
+        }
         span{
             padding-left: 20px;
-            color: transparentize($color-adeep,0.5);
-            font-size: $font-size-login - 1pt;
-            strong{
-                font-weight: bold;
-            }
         }
     }
     .img-article-header{

@@ -8,6 +8,7 @@ $('.cerrar').on("click",function(){
     $('body').removeClass('change-background-color');
     $(document).data("loadedComments","false");
     $('.sectionComments').html("");
+    $('.segmentoArticle').html("");
     $('.indicador').text("0");
     //alert("clic");
 });
