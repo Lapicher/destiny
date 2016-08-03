@@ -103,10 +103,10 @@ $(window).on("scroll",function(){
                 url: "/api/comments/?_order=fecha",
                 method: "get",
                 success: function(comments){
-                    console.log(comments);
+                    //console.log(comments);
                     for(var item in comments){
                         console.log(comments[item]);
-                        console.log("data: "+$('.plantilla-detalle').data("id"));
+                        //console.log("data: "+$('.plantilla-detalle').data("id"));
                         if($('.plantilla-detalle').data("id")==comments[item].idArticle){
                             var item = '<div class="item-comment row">'+
                                  '<div class="row user-comment">'+
