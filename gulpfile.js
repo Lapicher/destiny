@@ -12,18 +12,22 @@ var sourcemaps=require('gulp-sourcemaps');
 var postcss=require('gulp-postcss');
 var autoprefixer=require('autoprefixer');
 var cssnano=require('cssnano');
+var imagemin=require('gulp-imagemin');
+//var spritesmith= require('gulp.spritesmith'); // no la use.
 
 //variables de patrones de archivos
 var jsFiles=["src/js/*.js","src/js/**/*.js"];
+var uploadedImages= ["uploads/*.png","uploads/*.jpg","uploads/*.gif","uploads/*.svg"];
+var assetsImages =["src/img/*.png","src/img/*.jpg","src/img/*.gif","src/img/*.svg"];
 
 // definimos tarea por defecto
-gulp.task("default", ["concat-js","compile-sass"], function(){
+gulp.task("default", ["concat-js","assets-images-optimization","compile-sass"], function(){
 
     // iniciar BrowserSync
     browserSync.init({
         //server: "./", // levanta servidor web en carpeta actual
         proxy: '127.0.0.1:8000',
-        browser: "google chrome"
+        browser: "google chrome" //firefox , opera, google chrome
     });
 
     // observa cambios en archivos SASS y ejecuta la tarea de compilación
@@ -34,6 +38,9 @@ gulp.task("default", ["concat-js","compile-sass"], function(){
 
     //observar cambios en archivos JS
     gulp.watch(jsFiles,["concat-js"]);
+
+    //observar cambios en archivos de imagen de src
+    //gulp.watch(assetsImages,[])
 });
 
 // definimos la tarea para compilar SASS
@@ -72,3 +79,29 @@ gulp.task("concat-js",function(){
     }))
     .pipe(browserSync.stream());
 });
+
+//optimizacion de imagenes de usuario. imagenes de contenido.
+gulp.task("uplouded-image-optimization",function(){
+
+});
+
+// optimizacion de assets. imagenes del sitio en general.
+gulp.task("assets-images-optimization",function(){
+    gulp.src(assetsImages)
+    .pipe(imagemin())
+    .pipe(gulp.dest("./dist/img/"));
+});
+/*
+// optimizacion de imagenes, hacienola minificada y sprite para solo una peticion http.
+gulp.task("sprite",function(){
+    var spriteData= gulp.src('./src/img/*')
+    .pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: '_sprite.scss',
+        imgPath: '../img/sprite.png'
+    }));
+
+    spriteData.img.pipe(buffer()).pipe(imagemin()).pipe(gulp.dest('./dist/img/'));
+    spriteData.css.pipe(gulp.dest('./src/scss/'));
+});
+*/

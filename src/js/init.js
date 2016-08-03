@@ -19,7 +19,7 @@ $(".article").each(function() {
     }
 
 
-    //colocar fecha de creacion del articulo en formato moment
+    //colocar fecha de creacion del articulo en formato moment 2 years ago.
     var creado=$(this).data().id.toString();
     var fecha=moment(creado,"YYMMDDHHmmss").format();
     var fechaFomart=moment(fecha).fromNow();
@@ -28,6 +28,6 @@ $(".article").each(function() {
 
     //cargar foto de perfil
     var url_image="../articles/"+user+"/img-profile/profile.jpg";
-    $(this).find('.picture-profile >img').attr("src",url_image);
+    $(this).find('.picture-profile >img').attr("src", url_image);
 
 });

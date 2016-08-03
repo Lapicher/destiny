@@ -66,7 +66,7 @@
     top: calc(100vh - 50px);
     right: 30px;
     opacity: 0.5;
-    background: transparent url('../../src/img/arrowtop.png') top left no-repeat;
+    background: transparent url('../../dist/img/arrowtop.png') top left no-repeat;
     z-index: 10;
     @include if-is-phone {
         right: 10px;

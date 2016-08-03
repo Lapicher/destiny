@@ -5,7 +5,6 @@ var moment= require('moment');
 //evento de click del articulo para rediccionar a la plantilla de detalle.
 $('.article-click').on("click",function(){
     var self=this;
-    //alert("click");
     var id=$(this).parent().data().id;
     var userArticle=$(this).parent().children().data().user;
     //console.log(userArticle);
@@ -30,12 +29,7 @@ $('.article-click').on("click",function(){
         $('.list-article').addClass('ocultar-detalle');
         $('body').addClass('change-background-color');
         $(window).scrollTop(0);
-
-
-
-
     });
-
 });
 
 //evento de click para el boton de agregar a favoritos.
@@ -61,5 +55,5 @@ $('.icon-heart').on("click",function(){
 
 //evento cuando no carga imagen de perfil pone por defecto un placeholder.
 $(".picture-profile >img").on("error",function(){
-    $(this).attr("src","../../src/img/profile-placeholder.png");
+    $(this).attr("src","../../dist/img/profile-placeholder.png");
 });

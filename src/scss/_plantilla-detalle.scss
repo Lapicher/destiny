@@ -3,13 +3,13 @@
     position: relative;
     top: 110px;
 
-    //background-color: $color-article;
     @include if-is-phone {
         top: 70px;
     }
     .cerrar{
       padding-right: 20px;
       padding-top: 10px;
+      padding-bottom: 30px;
       .icon-cross {
           color: darken($color-rojo-fav, 20%);
           &:hover{
@@ -25,7 +25,6 @@
           font-size: 0.8em;
           font-family: "icomoon";
       }
-
     }
     .user{
         background-color: darken($color-article, 5%);
@@ -52,9 +51,7 @@
         color: $color-negro;
         font-size: 23pt;
         font-family: $font-titulo-principal;
-
     }
-
     .fecha-creacion {
         padding-bottom: 20px;
         font-size: $font-size-login - 1pt;
@@ -172,9 +169,7 @@
           background-color: darken($color-article, 5%);
       }
     }
-
     .escribir{
-
         padding-bottom: 10px;
         padding: 0 10px 10px 10;
         small{
