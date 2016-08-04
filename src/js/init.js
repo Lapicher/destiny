@@ -27,7 +27,7 @@ $(".article").each(function() {
     //console.log(moment(fecha).format('LLL'));
 
     //cargar foto de perfil
-    var url_image="../articles/"+user+"/img-profile/profile.jpg";
+    var url_image="./articles/"+user+"/img-profile/profile.jpg";
     $(this).find('.picture-profile >img').attr("src", url_image);
 
 });
