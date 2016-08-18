@@ -123,7 +123,7 @@
     background-color: $color-article;
 }
 .mostrar-detalle{
-    display: initial;
+    display: block;
 }
 .ocultar-detalle{
     display: none;
@@ -179,12 +179,16 @@
             width: calc(100% - 10px);
         }
         button{
+            margin-top: 10px;
             padding: 10px 20px;
             background-color: $color-brackground-header;
             border-radius: 5px;
             &:hover{
                 background-color: $color-hover;
             }
+        }
+        input{
+            display: block;
         }
     }
 

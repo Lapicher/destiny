@@ -102,7 +102,7 @@ $(window).on("scroll",function(){
 
       var porcentScroll=((scroll + $(window).height())*100)/$(document).height();
       //console.log(porcentScroll);
-      if( porcentScroll > 70 && $(document).data("loadedComments") != "true" && plantillaVisible == 'inline'){
+      if( porcentScroll > 70 && $(document).data("loadedComments") != "true" && plantillaVisible == 'block'){
            $(document).data("loadedComments","true");
            console.log("Async traera los comentarios");
             /*
